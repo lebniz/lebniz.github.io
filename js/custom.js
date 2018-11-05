@@ -6,7 +6,7 @@ window.onload=function() {
 function upTime(countTo) {
   now = new Date();
 
-  countTo = countTo.toString()..replace(/-/g, "/");
+  countTo = countTo.toString().replace(/-/g, "/");
   // countTo = new Date(Date.parse(countTo.replace(/-/g, "/")));
   countTo = new Date(countTo);
   difference = (now-countTo);
