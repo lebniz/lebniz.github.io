@@ -5,8 +5,10 @@ window.onload=function() {
 
 function upTime(countTo) {
   now = new Date();
-  countTo = new Date(Date.parse(countTo.replace(/-/g, "/")));
-  // countTo = new Date(countTo);
+
+  countTo = countTo.toString()..replace(/-/g, "/");
+  // countTo = new Date(Date.parse(countTo.replace(/-/g, "/")));
+  countTo = new Date(countTo);
   difference = (now-countTo);
 
   days=Math.floor(difference/(60*60*1000*24)*1);
@@ -28,6 +30,10 @@ function upTime(countTo) {
 }
 
 
+var AV = require('leancloud-storage');
+var { Query, User } = AV;
+// 实时消息服务
+var { Realtime, TextMessage } = require('leancloud-realtime');
 
 var APP_ID = 'dbkqgkS5KaiLREIKUppiXSVI-gzGzoHsz';
 var APP_KEY = '0H0TNESh9J8qHPU2xDHisgld';
