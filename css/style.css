@@ -284,11 +284,25 @@ h2.subs-title  {
 {
     padding-left: 30px;
 }
+
+.contact-title ol{
+    max-height: 300px;
+}
 /**********************************
 Media Queries
 ***********************************/
 @media (min-width: 501px) and (max-width: 901px) {
-    .contact-title{
+.contact-title ol{
+    text-align: right;
+    max-height: 213px;
+}
+
+.contact-title li{
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding: 0 20px 20px;
+}
+
+.contact-title{
         padding: 15px;
 }
 .section-padding {

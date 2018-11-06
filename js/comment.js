@@ -13,7 +13,7 @@ query.find()
             let array = messages.map((item) => item.attributes)
             array.forEach((item) => {
                 let li = document.createElement('li')
-                li.innerText = `${item.name} \n ${item.content}`
+                li.innerText = `${item.content}\n--${item.name}`
                 let messageList = document.querySelector('#messageList')
                 messageList.appendChild(li)
             })
@@ -35,7 +35,7 @@ myForm.addEventListener('submit', function(e) {
             'content':content
         }).then(function(object) { //obiect为存入的数据的相关信息
             let li = document.createElement('li')
-            li.innerText = `${object.attributes.name} \n ${object.attributes.content}`
+            li.innerText = `${object.attributes.content}\n--${object.attributes.name}`
             let messageList = document.querySelector('#messageList')
             messageList.appendChild(li)
             myForm.querySelector('input[name=name]').value=''
