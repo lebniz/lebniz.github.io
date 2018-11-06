@@ -35,9 +35,10 @@ myForm.addEventListener('submit', function(e) {
             'content':content
         }).then(function(object) { //obiect为存入的数据的相关信息
             let li = document.createElement('li')
-            li.innerText = `${object.attributes.name}:${object.attributes.content}`
+            li.innerText = `${object.attributes.name}`+'<br>'+`${object.attributes.content}`
             let messageList = document.querySelector('#messageList')
             messageList.appendChild(li)
+            myForm.querySelector('input[name=name]').value=''
             myForm.querySelector('textarea[name=content]').value=''
         })
     }
