@@ -1,6 +1,6 @@
 window.onload=function() {
   // Month,Day,Year,Hour,Minute,Second
-  upTime('2015-12-31 12:10:21'); // ****** Change this line!
+  upTime('1988-11-08 11:31:21'); // ****** Change this line!
 }
 
 function upTime(countTo) {
