@@ -183,8 +183,8 @@ table {
 }
 
 .contact-submit {
-    background-color: #24B7A4;
-    border: 2px solid #24B7A4;
+    background-color: #fd6d34;
+    border: 2px solid #fd6d34;
     color: #FFFFFF;
     width: 100%;
     display: block;
@@ -287,12 +287,12 @@ h2.subs-title  {
 
 .contact-title ol{
     text-align: right;
-    max-height: 213px;
 }
 
 .contact-title li{
     border-bottom: 1px solid rgba(255,255,255,0.2);
-    padding: 0 20px 20px;
+    margin: 0 20px 20px;
+    padding-bottom: 20px;
 }
 
 /**********************************
