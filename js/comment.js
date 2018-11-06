@@ -13,7 +13,7 @@ query.find()
             let array = messages.map((item) => item.attributes)
             array.forEach((item) => {
                 let li = document.createElement('li')
-                li.innerText = `${item.name}: ${item.content}`
+                li.innerText = `${item.name}`+'<br>'+`${item.content}`
                 let messageList = document.querySelector('#messageList')
                 messageList.appendChild(li)
             })
@@ -28,14 +28,17 @@ myForm.addEventListener('submit', function(e) {
     let name = myForm.querySelector('input[name=name]').value
     var Message = AV.Object.extend('Message');
     var message = new Message();
-    message.save({
-        'name':name,
-        'content':content
-    }).then(function(object) { //obiect为存入的数据的相关信息
-        let li = document.createElement('li')
-        li.innerText = `${object.attributes.name}:${object.attributes.content}`
-        let messageList = document.querySelector('#messageList')
-        messageList.appendChild(li)
-        myForm.querySelector('textarea[name=content]').value=''
-    })
+
+    if(content.length > 0){
+        message.save({
+            'name':name,
+            'content':content
+        }).then(function(object) { //obiect为存入的数据的相关信息
+            let li = document.createElement('li')
+            li.innerText = `${object.attributes.name}:${object.attributes.content}`
+            let messageList = document.querySelector('#messageList')
+            messageList.appendChild(li)
+            myForm.querySelector('textarea[name=content]').value=''
+        })
+    }
 })
