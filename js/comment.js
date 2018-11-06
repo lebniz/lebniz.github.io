@@ -24,7 +24,7 @@ let myForm = document.querySelector('#postMessageForm')
 
 myForm.addEventListener('submit', function(e) {
     e.preventDefault()
-    let content = myForm.querySelector('input[name=content]').value
+    let content = myForm.querySelector('textarea[name=content]').value
     let name = myForm.querySelector('input[name=name]').value
     var Message = AV.Object.extend('Message');
     var message = new Message();
@@ -36,6 +36,6 @@ myForm.addEventListener('submit', function(e) {
         li.innerText = `${object.attributes.name}:${object.attributes.content}`
         let messageList = document.querySelector('#messageList')
         messageList.appendChild(li)
-        myForm.querySelector('input[name=content]').value=''
+        myForm.querySelector('textarea[name=content]').value=''
     })
 })
