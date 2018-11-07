@@ -287,6 +287,8 @@ h2.subs-title  {
 
 .contact-title ol{
     text-align: right;
+    overflow-y: scroll;
+    max-height: 300px;
 }
 
 .contact-title li{
