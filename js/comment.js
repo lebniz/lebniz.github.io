@@ -15,7 +15,7 @@ query.find()
                 let li = document.createElement('li')
                 li.innerText = `${item.content}\n\n-- ${item.name}`
                 let messageList = document.querySelector('#messageList')
-                messageList.appendChild(li)
+                messageList.insertBefore(li)
             })
         }
     )
@@ -37,7 +37,7 @@ myForm.addEventListener('submit', function(e) {
             let li = document.createElement('li')
             li.innerText = `${object.attributes.content}\n\n-- ${object.attributes.name}`
             let messageList = document.querySelector('#messageList')
-            messageList.appendChild(li)
+            messageList.insertBefore(li)
             myForm.querySelector('input[name=name]').value=''
             myForm.querySelector('textarea[name=content]').value=''
         })
